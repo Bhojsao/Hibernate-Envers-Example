@@ -1,0 +1,25 @@
+server:
+  port: 8012
+  contextPath: /SpringBootEnvers
+
+spring: 
+  datasource:
+    initialize: true
+    driverClassName: oracle.jdbc.driver.OracleDriver
+    url: jdbc:oracle:thin:@localhost:1521:xe
+    username: ENVERS_FLYWAY_DB
+    password: Db12345
+  
+  jpa:
+    show-sql: true
+    hibernate :
+     ddl-auto: none
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+    
+flyway:
+   enabled: true
+   url: jdbc:oracle:thin:@localhost:1521:xe
+   baselineOnMigrate : true       
+  
+
+  

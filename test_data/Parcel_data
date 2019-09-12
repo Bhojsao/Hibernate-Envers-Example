@@ -1,0 +1,9 @@
+{
+  "parcelId"   :"50",
+  "parcelName" : "AA",
+  "parcelDesc" : "desc",
+  "currentlocation" : "Thane",
+  "origin" : "Mumbai",
+  "destination" : "Pune",
+  "state" : "Packed"
+}

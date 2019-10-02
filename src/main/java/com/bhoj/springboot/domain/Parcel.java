@@ -46,40 +46,50 @@ public class Parcel implements Serializable {
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ID_SEQUENCE")
 	@SequenceGenerator(name = "ID_SEQUENCE", sequenceName = "ID_SEQ")
 	@Column(name = "PARCEL_ID")
+	@JsonProperty
 	private int parcelId;
 
 	@Column(name = "PARCEL_NAME")
+	@JsonProperty
 	private String parcelName;
 
 	@Column(name = "PARCEL_DESC")
+	@JsonProperty
 	private String parcelDesc;
 
 	@Column(name = "CURRENT_LOCATION")
 	private String currentlocation;
 
 	@Column(name = "ORIGIN")
+	@JsonProperty
 	private String origin;
 
 	@Column(name = "DESTINATION")
+	@JsonProperty
 	private String destination;
 
 	@Column(name = "STATE")
+	@JsonProperty
 	private String state;
 
 	@CreatedBy
 	@Column(name = "CREATED_BY")
+	@JsonProperty
 	private String createdBy;
 
 	@CreatedDate
 	@Column(name = "CREATED_DATE", nullable = false, updatable = false)
+	@JsonProperty
 	private Date createdDate;
 
 	@LastModifiedBy
 	@Column(name = "LAST_MODIFIED_BY")
+	@JsonProperty
 	private String lastModifiedBy;
 
 	@LastModifiedDate
 	@Column(name = "LAST_MODIFIED_DATE")
+	@JsonProperty
 	private Date lastModifiedDate;
 
 	public Parcel() {

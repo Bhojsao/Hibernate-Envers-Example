@@ -22,19 +22,19 @@ import com.bhoj.springboot.repository.ParcelRepository;
  */
 @RestController
 @CrossOrigin
+@RequestMapping(value = "/parcel")
 public class ParcelController {
 
 	@Autowired
 	private ParcelRepository parcelRepository;
 
-	@RequestMapping(value = "/parcel/getAllParcel", method = RequestMethod.GET)
+	@RequestMapping(value = "/getAllParcel", method = RequestMethod.GET)
 	public ResponseEntity<?> getAllParcel() {
 		List<Parcel> parcels = parcelRepository.findAll();
 		return new ResponseEntity<List<Parcel>>(parcels, HttpStatus.OK);
 	}
 
 	@RequestMapping(value = "/parcel/save", method = RequestMethod.POST)
-
 	public ResponseEntity<?> save(@RequestBody Parcel parcel) {
 		
 		Parcel dbParcel = parcelRepository.save(parcel);
